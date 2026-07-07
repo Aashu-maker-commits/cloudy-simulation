@@ -1,0 +1,34 @@
+title pure template
+#sphere
+blackbody 10000000 K
+luminosity solar 5
+radius 14
+hden 6, power =-2
+set nend 15000
+set drmin 8
+stop column density 23
+stop temperature =100K
+save incident continuum units microns "incident.dat"
+abundances he=-1.01103 li=-3.39 be=-5 b=-3.87 o=-3.070283  c=-3.44580 n=-3.950424
+continue f=-7.6 ne =-3.959024 na =-5.7 mg =-4.5511866
+continue al =-5.48190246 si =-4.4819024 p=-6.5 s=-4.754904 cl=-6.7 ar =-5.48190246 k=-6.98
+continue ca =-5.65799422 sc=-8.9 ti=-7.5 v=-7.7 cr=-6.3 mn=-7.24 fe =-4.5276604
+continue co =-7.1 ni =-5.95902421 cu=-7.5 zn=-7.5
+save overview "script.ovr"
+save physical conditions "phys.dat"
+save source function, depth "depth.dat"
+save cooling "cooling.dat"
+save heating "heating.dat"
+save total opacity "total_opacity.dat"
+save PDR "PDR.dat"
+save results last iteration "results_last.dat"
+save continuum units microns last file="last_cont_h6_t10000000.dat"
+#map 20 [range 1.0e2, 1.0e4]
+#save map file = "map_3.dat"
+#stop zone 1
+#set nmaps 200
+save abundances "abundance_out.dat"
+#save element Helium "Helium.dat"
+#plot _map [Tmin=3,000K, Tmax=20,000K]
+
+
