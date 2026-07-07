@@ -1,6 +1,6 @@
 # Transmission Simulation
 
-This folder contains the input file and Python script used to perform sequential Cloudy transmission simulations.
+This folder contains the input file(model_1.in,model_2.in,model_3.in,model_4.in,model_5.in) and Python script(Make_model of N transmission.ipynb and simulation of N transmission.ipynb ) used to perform sequential Cloudy transmission simulations.
 
 ## Contents
 
@@ -27,3 +27,4 @@ The notebook includes plots of:
 
 - The incident continuum for each transmission.
 - The incident and net transmitted continua for comparison after each simulation.
+- The incident and transmitted continua for comparison after each simulation.
