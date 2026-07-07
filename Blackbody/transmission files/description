@@ -1,1 +1,21 @@
+# Transmitted Continuum Files
 
+This repository contains the transmitted continuum (`.trn`) files generated using Cloudy.
+
+The models were run with:
+
+- Hydrogen density (`hden`) = 9.1
+- Luminosity = 10⁵ L
+- Density law: power = -2
+- Inner radius = 10¹⁴ cm
+- Stopping column density = 10²³ cm⁻²
+
+For these simulations, the transmitted continuum from one model is used as the incident continuum for the next model.
+
+For example,
+
+- Model 1 uses the original input spectrum that is of a blackbody.
+- Model 2 uses the transmitted continuum from Model 1 as its input.
+- Model 3 uses the transmitted continuum from Model 2 as its input.
+
+This process is repeated for all subsequent models.
