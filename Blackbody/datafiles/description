@@ -1,5 +1,33 @@
-This datafiles reposiratory has :
-1) datafiles of the blackbody
-2) model of the blackbody we ran in the cloudy software
-3) python code we ran to simulate and model
-4) to summarize the results, the plots of each density and temperature.
+# Cloudy Blackbody Data Files
+
+This repository contains the output data files from Cloudy simulations of blackbody radiation fields.
+
+## Contents
+
+This repository currently includes:
+
+- **`last_cont`** files generated from the Cloudy simulations.
+- Models corresponding to **hydrogen densities from `hden = 4` to `hden = 12`**.
+- Simulations performed for different **blackbody temperatures**.
+
+## File Naming Convention
+
+The filenames follow the format:
+
+```
+last_cont_hX_TY.dat
+```
+
+where:
+
+- **`hX`** denotes the logarithm of the hydrogen density (`hden` in Cloudy).
+  - Example:
+    - `h4` → `hden = 10^4 cm⁻³`
+    - `h8` → `hden = 10^8 cm⁻³`
+    - `h12` → `hden = 10^12 cm⁻³`
+
+- **`T`** denotes the blackbody temperature used in the simulation.
+
+## Software
+
+These models were generated using **Cloudy C25.00**.
