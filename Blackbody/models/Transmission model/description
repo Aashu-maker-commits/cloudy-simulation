@@ -4,19 +4,22 @@ This folder contains the input file and Python script used to perform sequential
 
 ## Contents
 
-- `new_test.in` – Cloudy input template.
-- `transmission.py` – Python script that automatically generates and runs multiple Cloudy input files.
+- `new_test.in` – Template Cloudy input file.
+- `transmission.py` – Python script that generates and runs the transmission models.
+- `model_*.in` – Cloudy input files generated for each transmission.
+- `wr_trans*.trn` – Transmitted continuum files produced by each simulation.
 
 ## Description
 
-The script generates `N` Cloudy input files (`model_1.in`, `model_2.in`, ..., `model_N.in`) from the template `new_test.in`.
+The Python script generates `N` Cloudy input files (`model_1.in`, `model_2.in`, ..., `model_N.in`) from the template `new_test.in`.
 
-For each simulation:
+For each transmission:
 
 - The transmitted continuum (`wr_trans(n-1).trn`) from the previous model is used as the incident continuum for the next model.
-- A new transmitted continuum (`wr_transn.trn`) is produced for the subsequent simulation.
+- A new Cloudy input file (`model_n.in`) is generated.
+- Running the input file produces a new transmitted continuum (`wr_transn.trn`), which serves as the input for the following transmission.
 
-This allows the radiation field to evolve as it propagates through successive shells.
+This process simulates the evolution of the radiation field as it propagates through successive shells.
 
 ## Visualization
 
@@ -24,4 +27,3 @@ The notebook includes plots of:
 
 - The incident continuum for each transmission.
 - The incident and net transmitted continua for comparison after each simulation.
-- The incident and transmitted continua for comparison after each simulation.
