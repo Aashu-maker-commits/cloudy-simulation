@@ -48,21 +48,6 @@ How it fits together:
 - The Jupyter notebooks read those .dat outputs (or run processing steps) and produce plots/analysis to inspect continuum, line strengths, or transmission as functions of model parameters (temperature, density, optical depth, etc.).
 
 ---
-
-## Prerequisites
-- Cloudy (or the radiative-transfer code used to run the .in model inputs). Use the same Cloudy major version you used when producing the stored outputs to ensure identical outputs.
-- Python 3.8+ for the notebooks and plotting.
-- Typical Python packages used in the notebooks: jupyter / jupyterlab, numpy, matplotlib, pandas (install as needed).
-
-Suggested Python install:
-```bash
-python -m venv .venv
-source .venv/bin/activate       # or .venv\Scripts\activate on Windows
-pip install jupyterlab numpy matplotlib pandas
-```
-
----
-
 ## How to reproduce results / run models
 
 1. Run a model input with Cloudy
@@ -118,9 +103,4 @@ jupyter lab
 
 Authors: Prof Arkaprabha Sarangi and Anwesha Barman
 
----
 
-## Suggested follow-ups
-- Add a small requirements.txt or environment.yml capturing exact Python packages used by the notebooks.
-- Add a short script (e.g., run_model.sh) that standardizes the Cloudy invocation used for these inputs.
-- Record the Cloudy version and exact run commands used to generate the committed data so others can reproduce outputs exactly.
