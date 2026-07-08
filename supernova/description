@@ -1,1 +1,8 @@
+This supernova directory has 3 directories -
+1) datafiles
+2) input files
+3) models
 
+the data files have the output spectra we got after running the cloudy code for each hden and luminosity
+the input files have the input supernova spectrum
+the models have all the files we run in the cloudy software and also the python scripts. This further has 2 directories
